@@ -34,9 +34,11 @@ export default async function Home() {
   ];
 
   return (
-    <main className="container mx-auto max-w-3xl p-8 space-y-16">
+    <main className="container mx-auto max-w-3xl p-8 space-y-16 bg-white/70 dark:bg-gray-900/60 rounded-xl shadow-xl backdrop-blur">
       <section className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">Oliver Huth</h1>
+        <h1 className="text-4xl font-bold" style={{ color: "var(--accent)" }}>
+          Oliver Huth
+        </h1>
         <Image
           src="https://placekitten.com/400/400"
           alt="Profile picture"
@@ -56,7 +58,7 @@ export default async function Home() {
           {posts.length === 0 && <li>No posts found.</li>}
           {posts.map((post) => (
             <li key={post.link}>
-              <a href={post.link} className="text-blue-600 hover:underline">
+              <a href={post.link} className="hover:underline">
                 {post.title}
               </a>
             </li>
@@ -69,7 +71,7 @@ export default async function Home() {
         <ul className="list-disc list-inside space-y-2">
           {projects.map((project) => (
             <li key={project.link}>
-              <a href={project.link} className="text-blue-600 hover:underline">
+              <a href={project.link} className="hover:underline">
                 {project.name}
               </a>
             </li>
