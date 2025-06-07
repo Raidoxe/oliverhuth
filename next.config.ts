@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
         hostname: "placekitten.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "cdn-images-1.medium.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "miro.medium.com",
+        pathname: "/**",
+      },
     ],
   },
 };
